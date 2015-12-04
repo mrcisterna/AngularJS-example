@@ -1,0 +1,39 @@
+﻿
+    <div class="wrapper-md">
+        <div class="col-xs-12 col-md-8 col-lg-4">
+            <div class="form-group">
+                <small for="date">Date</small>
+                <input type="date" class="form-control" name="date" ng-model="customerDetail.visit.date" required>
+                <div ng-show="forms.form.date.$dirty && forms.form.date.$invalid">
+                    <span class="text-sm text-danger" ng-show="forms.form.date.$error">Date selection for visit is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <small for="time">Hour</small>
+                <input type="time" class="form-control" name="time" ng-model="customerDetail.visit.time" required>
+                <div ng-show="forms.form.time.$dirty && forms.form.time.$invalid">
+                    <span class="text-sm text-danger" ng-show="forms.form.time.$error">Time selection for visit is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <small for="notes">Notes</small>
+                <textarea class="form-control" name="notes" ng-model="customerDetail.visit.notes" placeholder="Write here!"></textarea>
+                <div ng-show="forms.form.notes.$dirty && forms.form.notes.$invalid">
+                    <span class="text-sm text-danger" ng-show="forms.form.notes.$error.required">Some text is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <small for="action">Actions</small>
+                <select class="form-control" name="action" ng-model="customerDetail.visit.action" required>
+                    <option value="" disabled selected style="display: none;">Choose</option>
+                    <option value="Offer">Offer</option>
+                    <option value="Lead">Lead</option>
+                    <option value="Notes">Notes</option>
+                    <option value="Action">Action</option>
+                </select>
+                <div ng-show="forms.form.notes.$dirty && forms.form.notes.$invalid">
+                    <span class="text-sm text-danger" ng-show="forms.form.action.$error">Action selection is required</span>
+                </div>
+            </div>
+        </div>
+    </div>

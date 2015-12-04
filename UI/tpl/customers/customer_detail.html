@@ -1,0 +1,33 @@
+﻿<form name="forms.form" class="form-validation" novalidate>
+    <div class="wrapper-md">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div ng-include="'tpl/customers/header/customer_detail_header.html'"></div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="wrapper-md">
+                            <uib-tabset>
+                                <uib-tab heading="Notes" select="selectNotesTab()">
+                                    <div ng-if="noteFormSelected">
+                                        <div ng-include="'tpl/customers/forms/note_form.html'"></div>
+                                    </div>
+                                </uib-tab>
+                                <uib-tab heading="Visit" select="selectVisitTab()">
+                                    <div ng-if="visitFormSelected">
+                                        <div ng-include="'tpl/customers/forms/visit_form.html'"></div>
+                                    </div>                                    
+                                </uib-tab>
+                            </uib-tabset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer text-right">                
+                <button class="btn btn-success" ng-if="noteFormSelected" ng-click="saveNotes(customerDetail)" ng-disabled="forms.form.$invalid">Save</button>
+                <button class="btn btn-success" ng-if="visitFormSelected" ng-click="saveVisit(customerDetail)" ng-disabled="forms.form.$invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</form>

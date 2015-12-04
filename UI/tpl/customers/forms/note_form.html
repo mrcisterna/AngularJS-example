@@ -1,0 +1,26 @@
+﻿
+    <div class="wrapper-md">
+        <div class="col-xs-12 col-md-8 col-lg-4">
+            <div class="form-group">
+                <small for="notes">Notes</small>
+                <textarea name="form.notes" class="form-control" ng-model="customerDetail.notes" placeholder="Write a note here!"></textarea>                
+                <div ng-show="form.notes.$dirty && form.notes.$invalid">
+                    <span class="text-sm text-danger" ng-show="form.notes.$error.required">Some text is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <small for="action">Status</small>
+                <select class="form-control" name="form.status" ng-model="customerDetail.status" required>
+                    <option value="New">New</option>
+                    <option value="InProgress">InProgress</option>
+                    <option value="OrderPlaced">OrderPlaced</option>
+                    <option value="Support">Support</option>
+                    <option value="Cancelled">Cancelled</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+                <div ng-show="forms.form.status.$dirty && forms.form.status.$invalid">
+                    <span class="text-sm text-danger" ng-show="forms.form.status.$error.required">Status selection is required</span>
+                </div>
+            </div>
+        </div>
+    </div>

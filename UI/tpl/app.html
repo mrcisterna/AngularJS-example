@@ -1,0 +1,12 @@
+﻿<div data-ng-include="'tpl/content/header.html'" class="app-header navbar" ng-if="app.user.username">
+</div>
+<div class="app-content">    
+    <div class="app-content-body fade-in-up" ui-view></div>
+</div>
+<div class="wrapper b-t bg-success navbar-fixed-bottom" ng-if="app.user.username">
+    <div class="btn-group pull-right">
+        <button class="btn btn-info m-r-xs" ng-click="$root.removeFilter()" ng-disabled="!$root.hasFilter">Remove filter</button>
+        <button class="btn btn-primary" ng-click="$root.getCustomers()">Refresh list</button>
+    </div>
+</div>
+<div ui-message></div>

@@ -1,0 +1,47 @@
+﻿<div class="row">
+    <div class="col-xs-10 col-lg-11">
+        <div class="row">
+            <div class="col-xs-12 col-lg-3">
+                <div>
+                    <small class="text-muted">Name:</small>
+                </div>
+                <span class="text-info">{{customerDetail.customername}}</span>
+            </div>
+            <div class="col-xs-6 col-lg-3">
+                <div>
+                    <small class="text-muted">Id:</small>
+                </div>
+                <span class="text-info">{{customerDetail.id}}</span>
+            </div>
+            <div class="col-xs-6 col-lg-3">
+                <div>
+                    <small class="text-muted">Product name:</small>
+                </div>
+                <span class="text-info">{{customerDetail.productname}}</span>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                <div>
+                    <small class="text-muted">Status:</small>
+                </div>
+                <span class="text-info">{{customerDetail.status}}</span>
+            </div>
+            <div class="col-xs-6 col-lg-3" ng-repeat="item in customerDetail.communications">
+                <div ng-if="item.category=='Phone'">
+                    <div>
+                        <small class="text-muted">Phone:</small>
+                    </div>
+                    <a href="callto://+{{item.value}}"><span class="text-info hidden-xs">{{item.value}}</span></a>
+                </div>
+                <div ng-if="item.category=='Email'">
+                    <div>
+                        <small class="text-muted">Email:</small>
+                    </div>
+                    <a><span class="text-info">{{item.value}}</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2 col-lg-1 text-right">
+        <button ng-click="logout()" class="btn btn-toolbar"><span class="glyphicon glyphicon-log-out"></span></button>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿<!-- navbar header -->
+<div class="navbar-header bg-primary">   
+    <!-- brand -->
+    <i href class="navbar-brand text-lt">        
+        <span>
+            CROSSOVER
+        </span>
+    </i>
+    <!-- / brand -->
+</div>
+<!-- / navbar header -->
+<!-- navbar collapse -->
+<div class="uib-collapse pos-rlt navbar-collapse box-shadow header-menu bg-success">
+    <!-- buttons -->
+    <div class="nav navbar-nav hidden-xs">
+       
+    </div>
+    <div class="navbar-right">
+        <ul class="nav navbar-nav ">
+            <li uib-dropdown on-toggle="toggled(open)">
+                <a href class="clear bg-info" uib-dropdown-toggle>
+                    <span class="glyphicon glyphicon-user text-primary"></span>                    
+                </a>
+                <!-- Configuracion -->
+                <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
+                    <li role="menuitem"><a ui-sref="app.profile">Profile</a></li>
+                    <li role="menuitem"><a ui-sref="app.about">About</a></li>
+                    <li class="divider"></li>
+                    <li role="menuitem" ng-click="logout()"><a ui-sref="app.login">Quit</a></li>
+                </ul>
+                <!-- / dropdown -->
+            </li>
+        </ul>
+        <!-- / navbar right -->
+    </div>
+</div>
+<!-- / navbar collapse -->
